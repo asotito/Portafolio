@@ -37,14 +37,15 @@ if (!card) {
           <div class="md:text-lg md:w-full md:text-center text-base">
             <p>Herramientas usadas: {card.tools}</p>
           </div>
-          <div class="content-center items-center justify-center md:text-base text-sm ">
+          <div class="flex flex-col content-center items-center justify-center md:text-base text-sm ">
             <a href={card.link} target="_blank" rel="noopener noreferrer"><img src={"/" + card.image}  alt="image" class="w-96 transform transition-transform duration-300 hover:scale-105"></a>
+            <div class="text-xs p-2">
+              <p>
+                Presiona la imagen para visitar la plataforma
+              </p>
+            </div>
           </div>
-          <div class="text-xs p-2">
-            <p>
-              Presiona la imagen para visitar la plataforma
-            </p>
-          </div>
+          
         </div>
       </div>
     </div>
