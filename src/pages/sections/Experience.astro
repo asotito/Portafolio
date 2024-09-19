@@ -1,0 +1,41 @@
+---
+import ExperienceCard from "../../components/ExperienceCard.astro";
+import { cards } from "../../data/ExperienceCards";
+---
+
+
+
+<section id="experience" class="experience">
+    <div class="section-container h-full">
+        <div class="md:pt-11 flex-col">
+            <div class="pt-5 md:p-10">
+                <h1 class="text-3xl md:text-5xl text-AzulClaro font-black whitespace-nowrap">
+                    Experiencia
+                </h1>
+                
+            </div>
+            <div class="pt-5 pb-5 md:p-0">
+                <p class="md:hidden text-sm text-AzulClaro">Presiona las tarjeta</p>
+            </div>
+            <div>
+                {
+                    cards.length > 0 ? (
+                        <div class="flex flex-wrap gap-10 justify-center pt-10 pb-10 md:p-0">
+                            {cards.slice().reverse().map((card) => (
+                                <ExperienceCard {...card}/>
+                            ))}
+                        </div>
+                    ) : (
+                        <h1>Not Found</h1>
+                    )
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .experience {
+        background: linear-gradient(to bottom, #00ABE4, #426eaa);
+    }
+</style>

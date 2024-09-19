@@ -1,0 +1,54 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { cards } from '../../../data/ProjectCard'
+
+export async function getStaticPaths() {
+  return cards.map((card) => ({
+    params: { id: card.id },
+  }));
+}
+
+const { id } = Astro.params;
+const card = cards.find((p) => p.id === id);
+
+if (!card) {
+  throw new Error('Proyecto no encontrado');
+}
+---
+
+<Layout title='Andres Soto Dev'>
+  <div class="project ">
+    <div class="md:section-container pt-28 md:p-28 space-y-6">
+      <div class="flex space-x-3 m-2">
+        <a href="/" class="underline">Home</a>
+        <p>></p>
+        <a href="/#projects" class="underline">Proyectos</a>
+        <p>></p>
+        <a href="#" class="underline">{card.id}</a>
+      </div>
+      <div>
+        <div class="text-center text-3xl md:text-5xl font-black">
+          <h1>{card.title}</h1> 
+        </div>
+        <div class="flex flex-wrap content-center items-center justify-center m-10 space-y-6">
+          <div class="text-lg md:text-xl">
+            <p>{card.description} Realizado en el año {card.year}</p>
+          </div>
+          <div class="md:text-lg md:w-full md:text-center">
+            <p>Herramientas usadas: {card.tools}</p>
+          </div>
+          <div class="content-center items-center justify-center">
+            <a href={card.link} target="_blank" rel="noopener noreferrer"><img src={"/" + card.image}  alt="image" class="w-96 transform transition-transform duration-300 hover:scale-105"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+      .project {
+        height: 100vh;
+        background: linear-gradient(to top, #95d0e4, transparent );
+    }
+</style>

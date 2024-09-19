@@ -1,0 +1,71 @@
+<nav id="main-header" class="flex-no-wrap fixed top-0 flex w-full items-center py-2 justify-between bg-AzulClaro shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-2 z-10">
+    <div class="section-container flex py-2 justify-between ">
+        <div class="px-1">
+            <a href="/#"><img src="/public/Logo.webp" alt="Logo" class="w-20 relative z-10 transform transition-transform duration-300 hover:scale-150"></a>
+        </div>
+        <button
+            id="menu-toggle"
+            type="button"
+            class="md:hidden px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+            aria-label="Mostrar la barra de navegación"
+            >
+        <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+        >
+            <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"></path>
+        </svg>
+        </button>
+        <div class="hidden absolute md:relative md:flex items-center content-center text-AzulClaro md:text-AzulOscuro bg-AzulOscuro w-full h-auto md:bg-opacity-0 left-0 top-20 md:top-0 md:w-auto md:order-1" id="navbar-sticky">
+            <ul class="flex flex-col divide-y md:divide-y-0 md:flex-row p-4 md:p-0 md:mt-0">
+                <li class="mx-10 cursor-pointer md:p-0 p-4 relative z-10 transform transition-transform duration-300 hover:scale-150">
+                    <a href="/#aboutme">Yo</a>
+                </li>
+                <li class="mx-10 cursor-pointer md:p-0 p-4 relative z-10 transform transition-transform duration-300 hover:scale-150">
+                    <a href="/#experience">Experiencia</a>
+                </li>
+                <li class="mx-10 cursor-pointer md:p-0 p-4 relative z-10 transform transition-transform duration-300 hover:scale-150">
+                    <a href="/#projects">Proyectos</a>
+                </li>
+                <li class="mx-10 cursor-pointer md:p-0 p-4 relative z-10 transform transition-transform duration-300 hover:scale-150 hidden">
+                    <a href="/#certifications">Certificaciones</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>
+    .header-scrolled {
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(15px);
+    }
+
+    .active {
+        display: block !important;
+    }
+</style>
+
+<script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.getElementById("menu-toggle");
+        const navbarSticky = document.getElementById("navbar-sticky");
+
+        menuToggle.addEventListener("click", () => {
+            navbarSticky.classList.toggle("hidden");
+            navbarSticky.classList.toggle("active");
+        });
+
+
+    });
+</script>

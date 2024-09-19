@@ -1,0 +1,132 @@
+<section id="aboutme" class="about">
+    <div class="section-container h-full">
+        <div class="md:pt-11 flex-col">
+            <div class="p-5 md:p-10">
+                <h1 class="text-3xl md:text-5xl text-AzulOscuro font-black whitespace-nowrap">
+                    Sobre Mi
+                </h1>
+            </div>
+            <div class="items-center md:flex gap-10">
+                <div class="bg-AzulClaro rounded-md pd-2 md:p-10 justify-normal">
+                    <p class="text-justify p-3 text-sm md:text-base">
+                        Soy Andrés Soto, estudiante de octavo ciclo de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC).
+                    </p>
+                    <p class="text-justify p-3 text-sm md:text-base">
+                        Poseo conocimientos en diseño y desarrollo de aplicaciones, tanto web como móviles, y también tengo la capacidad de estructurar y diseñar la arquitectura de software. Me he especializado en diferentes marcos de trabajo y he estudiado diversos lenguajes que me permiten crear productos de calidad. Mi objetivo es desarrollar proyectos eficientes, escalables y con una interfaz de usuario optimizada, destinados tanto para el uso cotidiano como para aplicaciones especializadas que resuelvan necesidades específicas y aporten valor a sus usuarios.</p>
+                    <p class="text-justify p-3 text-sm md:text-base">
+                        Actualmente me encuentro trabajando como practicante, pero con la disponibilidad de realizar trabajo como freelance. 
+                    </p>
+                </div>
+                <div class="p-6 flex justify-center items-center w-full h-full">
+                    <button id="abrir-pdf" class="bg-AzulOscuro text-AzulClaro rounded-md font-bold text-xl relative p-4 transform transition-transform duration-300 hover:scale-110 w-full border-none cursor-pointer whitespace-nowrap">
+                        Descargar CV
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="pt-5 md:pt-10 w-full inline-flex overflow-hidden relative [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll content-center">
+                <li>
+                    <img class="w-16" src="public/angular.webp" alt="Angular" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/react.webp" alt="React" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/NET.svg" alt=".NET" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/javascript.svg" alt="JS" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/astro.webp" alt="Astro" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/mongoDB.svg" alt="MongoDB" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/python.webp" alt="Python" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/c.webp" alt="C++" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/html.webp" alt="HTML" />
+                </li>
+                <li>
+                    <img class="w-16 bg-Blanco" src="public/typescript.webp" alt="Typescript" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/vue.webp" alt="Vue" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/sql.webp" alt="SQL" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/springboot.webp" alt="Springboot" />
+                </li>
+            </ul>
+            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+                <li>
+                    <img class="w-16" src="public/angular.webp" alt="Angular" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/react.webp" alt="React" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/NET.svg" alt=".NET" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/javascript.svg" alt="JS" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/astro.webp" alt="Astro" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/mongoDB.svg" alt="MongoDB" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/python.webp" alt="Python" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/c.webp" alt="C++" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/html.webp" alt="HTML" />
+                </li>
+                <li>
+                    <img class="w-16 bg-Blanco" src="public/typescript.webp" alt="Typescript" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/vue.webp" alt="Vue" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/sql.webp" alt="SQL" />
+                </li>
+                <li>
+                    <img class="w-16" src="public/springboot.webp" alt="Springboot" />
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<style>
+    .about {
+        background: linear-gradient(to bottom, #95d0e4, #00ABE4);
+    }
+</style>
+
+<script>
+    let cvAbierto = false
+    let cvVentana: any;
+
+    document.getElementById('abrir-pdf')?.addEventListener('click', function() {
+        if (!cvAbierto) {
+            cvVentana = window.open('public/Andres_Soto.pdf', '_blank');
+            cvAbierto = true;
+        } else {
+            cvVentana.focus();
+        }
+    });
+</script>

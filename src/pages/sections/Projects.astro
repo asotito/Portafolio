@@ -1,0 +1,40 @@
+---
+import ProjectCard from "../../components/ProjectCard.astro"
+import { cards } from "../../data/ProjectCard";
+---
+
+
+<section id="projects" class="projects h-full">
+    <div class="section-container h-full">
+        <div class="md:pt-11 flex-col">
+            <div class="pt-5 md:p-10">
+                <h1 class="text-3xl md:text-5xl text-AzulClaro font-black whitespace-nowrap">
+                    Proyectos
+                </h1>
+                
+            </div>
+            <div class="pt-5 pb-5 md:p-0">
+                <p class="md:hidden text-sm text-AzulClaro">Presiona las tarjeta</p>
+            </div>
+            <div>
+                {
+                    cards.length > 0 ? (
+                        <div class="flex flex-wrap gap-10 justify-center pt-10 pb-10 md:p-0">
+                            {cards.map((card) => (
+                                <ProjectCard {...card}/>
+                            ))}
+                        </div>
+                    ) : (
+                        <h1>Not Found</h1>
+                    )
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .projects {
+        background: linear-gradient(to bottom, #426eaa, #00ABE4);
+    }
+</style>
