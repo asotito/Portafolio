@@ -70,5 +70,18 @@ export const cards: ProjectCard[] = [
         description: 'Movie Recommendation System fue uno de los primeros proyectos que desarrollé, con el objetivo de mejorar la precisión en la recomendación de títulos. Las plataformas actuales suelen utilizar modelos que no siempre benefician al usuario, lo que resulta en recomendaciones que no se alinean con sus gustos individuales. Para abordar este problema, la solución implementa un algoritmo de búsqueda en grafos no dirigidos con profundidad limitada, optimizando así la personalización de las sugerencias.',
         image: 'mrs.webp',
         link: 'https://alangalavis.pythonanywhere.com/'
+    },
+    {
+        id: 'GdP',
+        title: 'Gestor de Pedidos',
+        tools: [
+            'HTML, ',
+            'JavaScript, ',
+            'TailwindCSS',
+        ],
+        year: 2024,
+        description: 'El proyecto Gestor de Pedidos fue desarrollado durante mi curso de certificación en JavaScript, el cual realicé con el objetivo de perfeccionar mis habilidades en esta tecnología. Este proyecto tiene como finalidad gestionar las rutas de entrega de una serie de pedidos, proporcionando una interfaz más intuitiva para visualizar los destinos y los productos que deben ser entregados, optimizando así el proceso logístico.',
+        image: 'gp.webp',
+        link: 'https://gestor-de-productos.vercel.app/'
     }
 ]
