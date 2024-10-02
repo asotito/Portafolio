@@ -83,5 +83,19 @@ export const cards: ProjectCard[] = [
         description: 'El proyecto Gestor de Pedidos fue desarrollado durante mi curso de certificación en JavaScript, el cual realicé con el objetivo de perfeccionar mis habilidades en esta tecnología. Este proyecto tiene como finalidad gestionar las rutas de entrega de una serie de pedidos, proporcionando una interfaz más intuitiva para visualizar los destinos y los productos que deben ser entregados, optimizando así el proceso logístico.',
         image: 'gp.webp',
         link: 'https://gestor-de-productos.vercel.app/'
+    },
+    {
+        id: 'eCR',
+        title: 'eCommerce en React',
+        tools: [
+            'React, ',
+            'Firestore, ',
+            'JavaScript, ',
+            'Tailwind, ',
+        ],
+        year: 2024,
+        description: 'Desarrollé un eCommerce en React como parte de mi curso de certificación. El proyecto consistía en implementar un eCommerce completo que permitiera al usuario seguir todo el flujo de compra. Todos los productos se almacenan en Firestore, que también se utiliza para registrar las órdenes de compra una vez que el usuario selecciona los productos y confirma la compra. Finalmente, se recupera el ID de la orden para mostrárselo al usuario.',
+        image: 'eCommerceReact.webp',
+        link: 'https://ecommercereact-omega.vercel.app/'
     }
 ]
