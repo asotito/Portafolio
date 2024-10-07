@@ -97,5 +97,18 @@ export const cards: ProjectCard[] = [
         description: 'Desarrollé un eCommerce en React como parte de mi curso de certificación. El proyecto consistía en implementar un eCommerce completo que permitiera al usuario seguir todo el flujo de compra. Todos los productos se almacenan en Firestore, que también se utiliza para registrar las órdenes de compra una vez que el usuario selecciona los productos y confirma la compra. Finalmente, se recupera el ID de la orden para mostrárselo al usuario.',
         image: 'eCommerceReact.webp',
         link: 'https://ecommercereact-omega.vercel.app/'
+    },
+    {
+        id: 'IkSr',
+        title: 'Inkasolar Landing Page',
+        tools: [
+            'Webflow, ',
+            'JavaScript, ',
+            'Tailwind, ',
+        ],
+        year: 2024,
+        description: 'Participé en el desarrollo de la página web de Inkasolar, enfocándome principalmente en la interfaz de usuario. Durante este proyecto, apliqué mis habilidades en desarrollo frontend y tuve la oportunidad de aprender y utilizar una nueva herramienta de desarrollo low-code.',
+        image: 'inkasolar.webp',
+        link: 'https://www.inkasolar.pe/'
     }
 ]
