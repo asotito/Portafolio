@@ -1,0 +1,21 @@
+---
+const {name, institution, year, link} = Astro.props
+---
+
+<div class="bg-AzulClaro p-5 rounded-md text-AzulOscuro transform transition-transform duration-300 hover:scale-110 md:w-1/2 w-full">
+    <div class="p-2 text-xl">
+        <a href={link} target="_blank" rel="noopener noreferrer" class="hover:text-AzulBrillante underline md:no-underline">
+            {name}
+        </a>
+    </div>
+    <div class="p-2 text-lg">
+        <p>
+            {institution}
+        </p>
+    </div>
+    <div class="p-2 text-lg">
+        <p>
+            {year}
+        </p>
+    </div>
+</div>
