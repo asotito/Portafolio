@@ -4,9 +4,9 @@ const {name, institution, year, link} = Astro.props
 
 <div class="bg-AzulClaro p-5 rounded-md text-AzulOscuro transform transition-transform duration-300 hover:scale-110 md:w-1/2 w-full">
     <div class="p-2 text-xl">
-        <a href={link} target="_blank" rel="noopener noreferrer" class="hover:text-AzulBrillante underline md:no-underline">
+        <h1>
             {name}
-        </a>
+        </h1>
     </div>
     <div class="p-2 text-lg">
         <p>
@@ -17,5 +17,10 @@ const {name, institution, year, link} = Astro.props
         <p>
             {year}
         </p>
+    </div>
+    <div class="p-2 text-lg">
+        <a href={link} class="bg-Blanco text-AzulOscuro hover:bg-AzulOscuro hover:text-AzulBrillante p-3 rounded-lg" >
+            Ver más
+        </a>
     </div>
 </div>
